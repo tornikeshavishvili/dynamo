@@ -128,4 +128,4 @@ ISC
 
 ## Author
 
-[Your Name]
+Tornike Shavishvili
