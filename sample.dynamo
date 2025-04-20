@@ -1,0 +1,19 @@
+    use ./context module as context
+    use fs module as fs
+    use http module as http
+
+
+    describe create server and listen {port}. start:
+    assign server to from context create Server.
+    from server listen {port}.
+    end:
+
+    describe reverse string and print {str}. start:
+    assign reversed to from context reverse String {str}.
+    from context print {reversed}.
+    from fs write File Sync {"./reversed.txt"} {reversed}.
+    end:
+
+    reverse string and print {"hello world"}.
+
+    create server and listen {5000}. 
